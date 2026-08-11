@@ -2,6 +2,9 @@ pipeline {
     agent { 
         label 'ROBOSHOP' 
     }
+    environment { 
+        COURSE= 'Devops'
+    }
 
     stages {
         stage('Build') {
@@ -9,6 +12,7 @@ pipeline {
                 echo 'Building..'
                 sh '''
                     echo 'Building.. din-sri'
+                    echo "Course name is ${COURSE}"
                 '''
             }
         }
