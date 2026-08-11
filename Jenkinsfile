@@ -21,7 +21,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh '''
+                sh """
                     echo 'Building.. din-sri'
                     echo "Course name is ${COURSE}"
                     sleep 1
@@ -30,7 +30,7 @@ pipeline {
                     echo "Toggle is ${params.TOGGLE}"
                     echo "Choice is ${params.CHOICE}"
                     echo "Password is ${params.PASSWORD}"
-                '''
+                """
             }
         }
 
