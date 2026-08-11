@@ -32,6 +32,7 @@ pipeline {
                     echo "Password is ${params.PASSWORD}"
                 """
             }
+            
         }
 
         stage('Test') {
