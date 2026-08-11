@@ -5,6 +5,10 @@ pipeline {
     environment { 
         COURSE= 'Devops'
     }
+    options {
+        disableConcurrentBuilds()
+        //timeout(time: 1, unit: 'SECONDS') 
+    }
 
     stages {
         stage('Build') {
@@ -13,6 +17,7 @@ pipeline {
                 sh '''
                     echo 'Building.. din-sri'
                     echo "Course name is ${COURSE}"
+                    sleep 5
                 '''
             }
         }
