@@ -7,7 +7,7 @@ pipeline {
     }
     options {
         disableConcurrentBuilds()
-        timeout(time: 1, unit: 'MINUTES') 
+        //timeout(time: 1, unit: 'MINUTES') 
     }
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
@@ -45,6 +45,7 @@ pipeline {
         }
 
         stage('Deploy') {
+        /*
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
@@ -52,7 +53,7 @@ pipeline {
                 parameters {
                     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
                 }
-            }
+            }*/
             steps {
                 echo 'Deploying....'
                 sh '''
